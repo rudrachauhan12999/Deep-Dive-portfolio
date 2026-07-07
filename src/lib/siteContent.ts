@@ -76,10 +76,10 @@ export const PROJECTS: Project[] = [
   {
     title: "Deep Dive Portfolio",
     tagline: "Portfolio website",
-    stack: ["Next.js", "D3.js", "TypeScript"],
+    stack: ["Next.js", "D3.js", "TypeScript","React","Tailwind CSS","Framer Motion","Vercel"],
     detail: "Interactive website turning plain resume into explorable, animated portfolio website.",
-    github: "https://github.com/your-handle/data-viz-dashboard",
-    demo: "#",
+    github: "https://github.com/rudrachauhan12999/Deep-Dive-portfolio",
+    demo: "https://deep-dive-portfolio-puce.vercel.app/",
   },
  
 ];
