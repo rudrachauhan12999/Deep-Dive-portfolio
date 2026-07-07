@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌊 Deep Dive Portfolio
+#  Deep Dive Portfolio
 
 **An interactive underwater-exploration developer portfolio — not a page you scroll, a world you swim through.**
 
@@ -12,7 +12,7 @@
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://deep-dive-portfolio-puce.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](./LICENSE)
 
-**[🔴 Live Demo](https://deep-dive-portfolio-puce.vercel.app/) · [📂 Repository](https://github.com/rudrachauhan12999/Deep-Dive-portfolio)**
+**[ Live Demo](https://deep-dive-portfolio-puce.vercel.app/) · [ Repository](https://github.com/rudrachauhan12999/Deep-Dive-portfolio)**
 
 </div>
 
@@ -68,10 +68,10 @@ Three principles shaped every decision in this project:
 - **Underwater crossroads home screen** — a centered diver surrounded by four directional signposts, drifting through a living reef of schooling fish, jellyfish, a turtle, and an occasional shark.
 - **Physical, storytelling-driven navigation** — selecting a direction swims the diver toward that signpost, trailing bubbles, before the next themed region loads. Nothing teleports.
 - **Four fully themed regions:**
-  - 🏛️ **Sunken Ruins** (About Me) — profile, animated skill bars, career timeline, and fun facts.
-  - 💎 **Treasure Room** (Portfolio) — an animated treasure chest that opens to reveal flippable, keyboard-navigable project cards.
-  - 🏴‍☠️ **Pirate Cave** (Side Hustles) — certificates, hackathons, internships, courses, and achievements, each with a linked proof document.
-  - 🏝️ **Treasure Island** (Contact) — GitHub, LinkedIn, and an email "message in a bottle."
+  -  **Sunken Ruins** (About Me) — profile, animated skill bars, career timeline, and fun facts.
+  -  **Treasure Room** (Portfolio) — an animated treasure chest that opens to reveal flippable, keyboard-navigable project cards.
+  -  **Pirate Cave** (Side Hustles) — certificates, hackathons, internships, courses, and achievements, each with a linked proof document.
+  -  **Treasure Island** (Contact) — GitHub, LinkedIn, and an email "message in a bottle."
 - **Persistent UI across every page** — a home button, a minimap highlighting the current region, and a floating "Resume" bubble that opens a downloadable PDF on click.
 - **Full keyboard navigation** — arrow keys and WASD drive the diver and project-card browsing, in addition to full mouse and touch support.
 - **Accessible by design** — semantic landmarks, visible focus states, a skip-to-content link, `aria-live` navigation announcements, and complete `prefers-reduced-motion` support.
@@ -85,13 +85,13 @@ Three principles shaped every decision in this project:
 
 The Portfolio region showcases real, shipped work, including:
 
-### 🛡️ FrameGuard
+###  FrameGuard
 AI-powered deepfake detection platform built around a multi-agent architecture with adaptive frame sampling, combining audio and visual forensic analysis to flag manipulated video content.
 
-### 📊 Cortex Guard
+###  Cortex Guard
 Secure AI-powered SOC platform with built-in prompt injection defense.
 
-### ☀️ SunShare Grid
+###  SunShare Grid
 A renewable-energy and sustainability project focused on collaborative solar-grid sharing, built as a team contributor.
 
 *(Additional projects and full write-ups are available directly on the live site.)*
@@ -265,14 +265,7 @@ This project is licensed under the [MIT License](./LICENSE) — you're free to f
 ## 👤 Author
 
 **Rudra Chauhan**
-Computer Engineering Student · Minor in Data Science · CGPA: 8.22
 
 - GitHub: [@rudrachauhan12999](https://github.com/rudrachauhan12999)
 
 ---
-
-<div align="center">
-
-If this project inspired you, consider leaving a ⭐ on the repository.
-
-</div>
