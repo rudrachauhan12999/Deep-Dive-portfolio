@@ -1,124 +1,225 @@
-# Deep Dive — Pixel-Art Underwater Adventure Portfolio
+<div align="center">
 
-An interactive, game-like underwater exploration site built with **Next.js 15**, **TypeScript**, **Tailwind CSS v4**, and **Framer Motion**.
+# 🌊 Deep Dive Portfolio
 
-## A note on reference images vs. shipped assets
+**An interactive underwater-exploration portfolio — not a website you scroll, a world you swim through.**
 
-All of the sprites in this project (`src/lib/sprites.ts`) are original pixel art, hand-authored to match the color palette, proportions, and level of detail of any reference images shared during design — not literal copies of them. Several of the reference images circulated during design (the scuba mask, the cat sheet, the treasure chest) carry visible stock-marketplace watermarks or platform branding, meaning they're licensed/commercial assets neither of us holds rights to redistribute. If you own licenses for specific asset packs and want to use the real files:
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-1. Drop the image into `public/sprites/` (e.g. `public/sprites/cat.png`).
-2. In the relevant component, swap `<PixelSprite grid={CAT_HD} .../>` for a plain `<Image src="/sprites/cat.png" .../>` (or `<img>`).
+</div>
 
-That's it — no other wiring needed, since `PixelSprite` and `<Image>` are drop-in swaps at the same call sites.
+---
 
-## v6 — production polish pass
+## 📖 Project Overview
 
-- **Centralized content**: all editable copy now lives in `src/lib/siteContent.ts` — `SITE_LINKS` (GitHub/LinkedIn/email/resume), `PROFILE`, `SKILLS`, `TIMELINE`, `FUN_FACTS`, `PROJECTS`, `SIDE_HUSTLES`. Every page imports from there instead of inlining data, so there's exactly one place to edit for real content.
-- **Removed dev-facing notes that were visible to visitors** — the "Update the handles and email in `src/app/contact/page.tsx`" and "drop your real certificates" lines are gone from the live pages. That kind of instruction belongs in this README, not on the rendered site.
-- **Message bottle redrawn** larger and clearer: distinct cork, rounded glass body with a highlight streak, and a rolled scroll with visible end-caps and "text" lines so it reads unmistakably as a message in a bottle.
-- **Minimap**: higher-contrast borders/text, a glow on the current-location node, plus the section name spelled out underneath (not just a single letter).
-- **Resume bubble**: hover now shows a "Download Resume" tooltip.
-- Verified against the full production checklist: no placeholder names, no dev notes on-page, homepage crossroads already matches About(top)/Contact(left)/Diver(center)/Portfolio(right)/Side Hustles(bottom), and creature counts exceed the 10+ fish / 3+ jellyfish / 1+ turtle / occasional-shark minimums (17 fish, 4 jellyfish, 2 turtles, 1 shark, 1 whale).
+**Deep Dive Portfolio** reimagines the personal portfolio as a small, playable underwater indie game rather than a conventional scrolling webpage. Visitors take control of a pixel-art diver at an underwater crossroads and swim toward wooden signposts to explore different zones — **About Me**, **Portfolio**, **Side Hustles**, and **Contact** — each rendered as its own themed environment (sunken ruins, a treasure room, a pirate cave, a treasure island).
 
-## v5 — diver rebuild, real logos, simpler resume bubble
+The goal is simple: give recruiters, hackathon judges, and fellow developers something they'll actually remember, while still surfacing every piece of information a traditional portfolio would — skills, projects, timeline, credentials, and contact details — through interactive storytelling instead of static sections.
 
-- **Diver rebuilt from scratch** with an actual humanoid layout: a distinct smaller head with goggle-style lenses, a visible neck gap, a torso with a chest-stripe accent, separate outlined arms and legs, flippers, and a short snorkel accent by the shoulder — no more single blob silhouette.
-- **Contact page**: dropped the lighthouse/chest metaphors for LinkedIn and GitHub. They're now real logo-style badges (`BrandIcons.tsx`) — a dark GitHub mark and the standard blue LinkedIn "in" badge — sized large and instantly recognizable. Email stays as the pixel-art message bottle.
-- **Resume bubble**: removed the folder/document emoji — it's now just a clean floating bubble with the "RESUME" label, still upper-right, still opens `resume.pdf`.
+Built with **Next.js 15 (App Router)**, **TypeScript**, **React 19**, and **Framer Motion**, with all visual assets rendered as original pixel-art sprites — no images, no external asset dependencies.
 
-## v4 — critical polish pass
+---
 
-- **Diver and cat redrawn at higher resolution** with an extra shading pass — the diver is now a rounder, clearer silhouette with a distinct mask/lens/snorkel; the cat is a full sitting-cat silhouette (ears, curled tail, front paws) instead of a face-only bust.
-- **Treasure chest reworked**: more gold trim bands, a two-tone wood texture, a persistent soft glow, and animated sparkle particles (`Sparkles.tsx`) both at idle and in a brighter burst when it opens.
-- **Contact icons enlarged** (now the largest element on the page) with the same glow/sparkle treatment on the GitHub chest for instant recognizability.
-- **Resume bubble** moved to the upper-right (below the home button), roughly 40% larger, with a document emoji + "RESUME" label, gold glow ring, and a floating/drifting animation — opens `resume.pdf` immediately.
-- **Fish system expanced**: a genuine schooling cluster of 7 fish moving together, 10 individual fish at varied sizes/speeds/colors, two turtles and a shark on long, "occasional" cycles, a background whale, and four jellyfish at different depths — the reef never feels static.
+## ✨ Why This Portfolio Is Different
 
-## Run it locally
+Most developer portfolios are a single scrolling page: hero, about, projects, contact, done. This project deliberately breaks that mold:
+
+- 🕹️ **Exploration over scrolling** — there is no scroll-driven narrative. The homepage is a compass; you choose a direction and the diver physically swims there before the next scene loads.
+- 🎮 **Game-like interaction model** — arrow keys, WASD, and mouse/touch all drive navigation; project cards flip like collectible cards; a treasure chest must be opened to reveal work.
+- 🎨 **A consistent, hand-built visual language** — every creature, signpost, and icon is an original pixel-art sprite defined in code and rendered pixel-perfect, not a stock image library.
+- 🥚 **A genuine easter egg** — a hidden chest tucked into the scene rewards curious visitors with bonus content.
+- 🧭 **Still fundamentally a portfolio** — underneath the theme, it's the same information a recruiter needs: skills, timeline, projects with live links, credentials with proof, and direct contact channels.
+
+---
+
+## 🚀 Features
+
+- **Underwater crossroads home screen** — a centered diver, four directional signposts (About Me / Portfolio / Side Hustles / Contact), and a living reef of drifting fish, jellyfish, a turtle, and an occasional shark.
+- **Physical navigation, not instant page swaps** — selecting a direction animates the diver swimming toward that signpost, with a bubble trail, before transitioning to the next scene.
+- **Four themed zones**, each with its own background treatment:
+  - **Sunken Ruins** (About Me) — profile, skills bars, career timeline, fun facts.
+  - **Treasure Room** (Portfolio) — a treasure chest that opens to reveal flippable project cards.
+  - **Pirate Cave** (Side Hustles) — certificates, hackathons, internships, courses, and achievements with linked proof documents.
+  - **Treasure Island** (Contact) — GitHub, LinkedIn, and an email "message in a bottle."
+- **Persistent UI elements** across every page: a home button, a minimap highlighting the current zone, and a floating "Resume" bubble that opens a downloadable PDF.
+- **Centralized content model** — every editable piece of copy (links, projects, skills, timeline, credentials) lives in a single typed data file, not scattered across components.
+- **Keyboard-first interaction** — full arrow-key/WASD support for navigation and project card browsing, in addition to mouse and touch.
+- **Accessible by design** — semantic landmarks, visible focus states, a skip-to-content link, `aria-live` status updates during navigation, and full support for `prefers-reduced-motion`.
+- **Fully responsive** — from mobile through desktop, with layout, typography, and hit targets that adapt per breakpoint.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer              | Technology                                              |
+| ------------------ | -------------------------------------------------------- |
+| Framework           | [Next.js 15](https://nextjs.org/) (App Router)            |
+| Language            | [TypeScript](https://www.typescriptlang.org/)              |
+| UI Library          | [React 19](https://react.dev/)                            |
+| Styling             | [Tailwind CSS v4](https://tailwindcss.com/)                |
+| Animation           | [Framer Motion](https://www.framer.com/motion/)            |
+| Fonts               | Press Start 2P & VT323, self-hosted via `@fontsource`      |
+| Rendering           | Original pixel-art sprites rendered as crisp inline SVG   |
+| Deployment          | [Vercel](https://vercel.com/)                              |
+
+No external image assets, icon packs, or CDNs are required — every sprite is defined as code and rendered at runtime.
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots or a short screen recording here once the site is deployed — a GIF of the diver swimming between zones works especially well.
+
+| Home / Crossroads | About Me | Portfolio | Contact |
+| --- | --- | --- | --- |
+| _add screenshot_ | _add screenshot_ | _add screenshot_ | _add screenshot_ |
+
+---
+
+## 📦 Installation Instructions
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) 18.18 or later
+- npm (or your preferred package manager)
+
+### Clone and install
 
 ```bash
+git clone https://github.com/rudrachauhan12999/deep-dive-portfolio.git
+cd deep-dive-portfolio
 npm install
+```
+
+---
+
+## 💻 Local Development Setup
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Open http://localhost:3000. For a production build:
+Open [http://localhost:3000](http://localhost:3000) in your browser. The app supports hot-reloading, so edits to any file under `src/` are reflected immediately.
+
+Other available scripts:
 
 ```bash
-npm run build
-npm run start
+npm run build   # Production build
+npm run start   # Serve the production build locally
+npm run lint    # Run ESLint
 ```
 
-## What's new in v2
+---
 
-- **Wooden signboard navigation** replaces the old button UI. Four hand-authored pixel signposts (`SignPost.tsx`) sit at the compass points, swaying gently, releasing occasional bubbles, and glowing/scaling on hover — each with a background vignette hinting at its room (ruins for About Me, a glowing chest for Portfolio, a cave mouth for Side Hustles, a lighthouse for Contact).
-- **Fixed diver movement.** The diver no longer teleports — on selecting a direction it physically swims toward the real screen position of the chosen sign (measured via `getBoundingClientRect`), trailing bubbles the whole way, with a subtle parallax pull on the background, and only fades into a short screen-transition once the swim finishes.
-- **Minimap** (`MiniMap.tsx`), top-left on every room page, highlights your current location and lets you jump to any other room.
-- **Persistent home button** now uses an upgraded, higher-resolution pixel cat with a "HOME" tooltip on hover and a gentle bounce.
-- **Hidden easter egg**: a barely-visible half-buried chest in the corner of the landing page. Click it to unlock "CLASSIFIED EVIDENCE" — a hidden blurb about the FrameGuard project.
-- **Portfolio** now opens with a treasure-chest-click reveal animation before the project grid (all six real projects: FrameGuard, UIDAI Data Analysis, Text Summarization, Deepfake Detection System, Data Visualization Dashboard, Cybersecurity Projects) appears, each with GitHub/demo links, tech stack, and a screenshot placeholder slot.
-- **About Me** is restructured into Hero → Profile → Skills → Timeline → Fun Facts, with real bio content (no more "UNIT 01" style labeling — just "SUNKEN RUINS").
-- **Side Hustles** intro copy updated, plus a new "Achievements" category alongside Certificates/Hackathons/Internships/Courses.
-- **Contact** is now a Treasure Island: a GitHub Chest, LinkedIn Lighthouse, and Email Message-in-a-Bottle, each animated and glowing on hover.
-- Ambient world got busier: plankton dust, more bubble density, and the same drifting fish/shark/whale/jellyfish/turtle school, all now layered under a parallax pull during navigation.
-
-## How it's structured
+## 🗂️ Project Structure
 
 ```
 src/
-  app/
-    page.tsx              Landing page — signboard compass, diver swim logic, parallax
-    about/page.tsx         Sunken Ruins — hero, profile, skills, timeline, fun facts
-    portfolio/page.tsx     Treasure Room — chest-open reveal, real projects, flip cards
-    side-hustles/page.tsx  Pirate Cave — certs, hackathons, internships, courses, achievements
-    contact/page.tsx       Treasure Island — GitHub chest, LinkedIn lighthouse, email bottle
-    globals.css            Ocean palette, pixel fonts, retro UI primitives, keyframes
-  components/
-    OceanBackground.tsx   Themed gradient + parallax light shafts per room
-    Bubbles.tsx            Rising bubbles + drifting plankton dust
-    Creatures.tsx          Drifting/floating fish, shark, whale, jellyfish, turtle
-    SignPost.tsx            Wooden signboard: sway, seaweed, bubbles, glow, label overlay
-    PixelSprite.tsx        Renders a pixel grid as crisp SVG (the sprite engine)
-    HomeButton.tsx          Persistent pixel-cat button with tooltip, fixed top-right
-    MiniMap.tsx             Retro RPG-style minimap, current-room highlight
-    EasterEgg.tsx           Hidden chest → "CLASSIFIED EVIDENCE" modal
-    Sparkles.tsx            Reusable twinkle-particle burst (chest/contact glow)
-    BrandIcons.tsx          Real GitHub / LinkedIn logo badges (Contact page)
-    ResumeBubble.tsx        Floating resume bubble, upper-right, opens resume.pdf
-    RoomShell.tsx           Shared shell for the four sub-pages (+ minimap, cross-room nav)
-  hooks/
-    useDirectionNav.ts      Arrow-key / WASD → direction callback
-  lib/
-    sprites.ts              All pixel-art sprite grids + the shared palette
-    iconSprites.ts          Pixel icons (legacy, no longer used on Contact but kept for reuse)
+├── app/
+│   ├── page.tsx              # Home screen — signpost compass & diver navigation
+│   ├── about/page.tsx        # Sunken Ruins — profile, skills, timeline
+│   ├── portfolio/page.tsx    # Treasure Room — project showcase
+│   ├── side-hustles/page.tsx # Pirate Cave — credentials & achievements
+│   ├── contact/page.tsx      # Treasure Island — contact channels
+│   ├── layout.tsx            # Root layout, fonts, persistent UI
+│   └── globals.css           # Design tokens, palette, keyframes
+├── components/
+│   ├── OceanBackground.tsx   # Themed gradient background per zone
+│   ├── Creatures.tsx         # Fish, jellyfish, turtle, shark population
+│   ├── Bubbles.tsx           # Ambient bubble & particle system
+│   ├── SignPost.tsx          # Wooden signpost navigation component
+│   ├── PixelSprite.tsx       # Core sprite-rendering engine
+│   ├── HomeButton.tsx        # Persistent home navigation
+│   ├── MiniMap.tsx           # Current-zone indicator
+│   ├── ResumeBubble.tsx      # Floating resume download bubble
+│   ├── RoomShell.tsx         # Shared layout shell for zone pages
+│   ├── BrandIcons.tsx        # GitHub / LinkedIn icon components
+│   ├── Sparkles.tsx          # Particle-burst effect (treasure reveal)
+│   └── EasterEgg.tsx         # Hidden bonus-content interaction
+├── hooks/
+│   └── useDirectionNav.ts    # Arrow-key / WASD directional input hook
+└── lib/
+    ├── siteContent.ts        # ⭐ Single source of truth for all editable content
+    ├── sprites.ts            # Pixel-art sprite definitions & palette
+    └── iconSprites.ts        # Additional icon sprite definitions
 ```
 
-## Navigation
+---
 
-On the landing page:
-- **Arrow keys** or **WASD** swim the explorer toward a signboard (Up → About Me, Right → Portfolio, Down → Side Hustles, Left → Contact).
-- **Mouse/touch**: click any of the four signboards.
-- The diver stays visible throughout, swims to the sign's real position with a bubble trail, and only then a brief transition fades to the next room.
+## ✏️ Editing Content
 
-On the Portfolio page, click the chest to reveal projects, then **← / →** (or **A/D**) move between cards and **Enter/Space** flips the focused card.
+All recruiter-facing content — links, project descriptions, skills, timeline, and credentials — lives in **`src/lib/siteContent.ts`**. This is the only file you need to touch to personalize the site:
 
-## Customizing content
+```ts
+export const SITE_LINKS = {
+  github: "https://github.com/rudrachauhan12999",
+  linkedin: "https://linkedin.com/in/your-handle",
+  email: "you@example.com",
+  resume: "/resume.pdf",
+};
+```
 
-All real content lives in **`src/lib/siteContent.ts`** — this is the one file to edit:
+Replace `public/resume.pdf` with your actual resume (same filename) and drop any certificate/achievement PDFs into `public/pdf/`.
 
-- `SITE_LINKS` — your GitHub, LinkedIn, email, and resume path.
-- `PROFILE`, `SKILLS`, `TIMELINE`, `FUN_FACTS` — About Me page.
-- `PROJECTS` — Portfolio page (title, tagline, stack, detail, github, demo).
-- `SIDE_HUSTLES` — certificates/hackathons/internships/courses/achievements. Drop real proof PDFs into `public/pdf/` with matching filenames.
+---
 
-Replace `public/resume.pdf` with your real resume (same filename) and the Resume bubble just works.
+## ☁️ Deployment Instructions
 
-## Design system
+This project is optimized for zero-configuration deployment on **Vercel**:
 
-Colors, both fonts (`Press Start 2P` for headers/UI, `VT323` for body text — self-hosted via `@fontsource`, no external font requests), and the `.pixel-panel` / `.pixel-btn` primitives live in `src/app/globals.css` via Tailwind v4's `@theme`. Every sprite is a small grid of palette keys in `src/lib/sprites.ts`, rendered pixel-perfect via `PixelSprite.tsx`. Add a new creature or object by adding a grid there and dropping in `<PixelSprite grid={...} />`.
+1. Push the repository to GitHub.
+2. Import the repository at [vercel.com/new](https://vercel.com/new).
+3. Vercel auto-detects the Next.js framework — no build configuration is required.
+4. Click **Deploy**.
 
-## Accessibility
+Alternatively, deploy from the CLI:
 
-- Skip-to-content link, visible focus rings (gold outline) on every interactive element.
-- All decorative layers (bubbles, plankton, background creatures, vignettes) are `aria-hidden`.
-- `prefers-reduced-motion` disables/shortens animations site-wide, including the diver's swim.
-- Every interaction (signboards, cards, minimap, home button) works by mouse/touch or keyboard.
+```bash
+npm install -g vercel
+vercel
+```
+
+The project can also be self-hosted with `npm run build && npm run start` on any Node.js-compatible host.
+
+---
+
+## ♿ Accessibility & Responsiveness
+
+- Full keyboard navigation (arrow keys / WASD) alongside mouse and touch input.
+- Visible focus indicators and a skip-to-content link on every page.
+- `aria-live` regions announce navigation state changes for screen readers.
+- Respects `prefers-reduced-motion`, disabling non-essential animation for users who request it.
+- Responsive layout tested across mobile, tablet, and desktop breakpoints.
+
+---
+
+## 🔭 Future Improvements
+
+- [ ] Add real project screenshots and a demo video to the Screenshots section.
+- [ ] Add sound design (ambient underwater audio, toggleable).
+- [ ] Add a light/dark "surface vs. deep sea" theme toggle.
+- [ ] Persist visited-zone state so returning visitors see a "previously explored" indicator on the minimap.
+- [ ] Add unit/integration tests for navigation and content rendering.
+- [ ] Internationalization (i18n) support.
+
+---
+
+## 👤 Author
+
+**Rudra Chauhan**
+Computer Engineering Student — AI/ML, Data Analytics, Cyber Forensics & UI/UX
+
+- GitHub: [@rudrachauhan12999](https://github.com/rudrachauhan12999)
+
+---
+
+<div align="center">
+
+If you found this project interesting, consider leaving a ⭐ on the repository.
+
+</div>
