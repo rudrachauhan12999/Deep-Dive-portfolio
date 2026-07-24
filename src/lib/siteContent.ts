@@ -7,12 +7,12 @@ export const SITE_LINKS = {
   github: "https://github.com/rudrachauhan12999",
   linkedin: "https://www.linkedin.com/in/rudra-chauhan-69382a390?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   email: "rudrafordocs@gmail.com",
-  resume: "/resume.pdf",
+  resume: "/Rudra_Chauhan_Resume.pdf",
 };
 
 export const PROFILE = {
   name: "Rudra Chauhan",
-  role: "Computer Engineering Student pursuing minor degree in Data Science with a CGPA 8.22 ",
+  role: "Computer Engineering student with a Minor in Data Science, maintaining a CGPA of 8.22.",
   bio:
     "An engineer who treats every project like an expedition — mapping the unknown, salvaging what works, and surfacing with something worth sharing. Currently exploring AI/ML, cyber forensics, and interfaces that feel alive.",
   interests: ["AI", "Machine Learning", "Product ideation", "Data Analytics", "UI/UX"],
