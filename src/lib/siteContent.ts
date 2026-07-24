@@ -52,6 +52,22 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    title: "CVision",
+    tagline: "ML-based resume screening platform",
+    stack: ["React", "TypeScript", "Vite","Tailwind CSS ","Firebase Authentication"],
+    detail: "Recruitment platform that streamlines resume screening, candidate management, and structured resume analysis.",
+    github: "https://github.com/rudrachauhan12999/CVision",
+    demo: "https://cvision-three-xi.vercel.app/",
+  },
+  {
+    title: "Deep Dive Portfolio",
+    tagline: "Portfolio website",
+    stack: ["Next.js", "D3.js", "TypeScript","React","Tailwind CSS","Framer Motion","Vercel"],
+    detail: "Interactive website turning plain resume into explorable, animated portfolio website.",
+    github: "https://github.com/rudrachauhan12999/Deep-Dive-portfolio",
+    demo: "https://deep-dive-portfolio-puce.vercel.app/",
+  },
+  {
     title: "FrameGuard",
     tagline: "Deepfake frame forensics",
     stack: ["Python", "OpenCV", "PyTorch"],
@@ -71,15 +87,6 @@ export const PROJECTS: Project[] = [
     stack: ["Python", "FastAPI","React","Docker","PostgresSQL", "Transformers"],
     detail: "AI SOC platform that surfaces security alerts with LLM powered treat analysis.",
     github: "https://github.com/rudrachauhan12999/cortex-guard",
-  },
-  
-  {
-    title: "Deep Dive Portfolio",
-    tagline: "Portfolio website",
-    stack: ["Next.js", "D3.js", "TypeScript","React","Tailwind CSS","Framer Motion","Vercel"],
-    detail: "Interactive website turning plain resume into explorable, animated portfolio website.",
-    github: "https://github.com/rudrachauhan12999/Deep-Dive-portfolio",
-    demo: "https://deep-dive-portfolio-puce.vercel.app/",
   },
  
 ];
