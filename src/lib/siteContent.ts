@@ -120,6 +120,7 @@ export const SIDE_HUSTLES: { heading: string; entries: Achievement[] }[] = [
   {
     heading: "INTERNSHIPS",
     entries: [
+      { title: "AI/DS Internship", org: "YBI Foundation", year: "2026", proof: "/pdf/15 day internship.pdf" },
       { title: "Ethcial hacking internship", org: "Remarkskill education", year: "2025", proof: "/pdf/internship letter.jpg" },
       
       { title: "Ethcial hacking internship", org: "Remarkskill education", year: "2025", proof: "/pdf/internship-letter.pdf" },
