@@ -19,7 +19,7 @@ export const PROFILE = {
 };
 
 export const SKILLS = [
-  { name: "Python / ML", level: 88 },
+  { name: "Python / ML", level: 90 },
   { name: "Product ideation", level: 80 },
   { name: "TypeScript / React", level: 85 },
   { name: "Data Visualization", level: 82 },
@@ -104,8 +104,6 @@ export const SIDE_HUSTLES: { heading: string; entries: Achievement[] }[] = [
     entries: [
       { title: "Data mining", org: "NPTEL", year: "2026", proof: "/pdf/dm nptel certificate.pdf" },
       { title: "Training on ethical hacking", org: "Remarkskill Education", year: "2025", proof: "/pdf/ethical hacking certificate.jpg" },
-      { title: "IBM AI Fundamentals(in progress)", org: "IBM", year: "2026", proof: "/pdf/mi-certificate.pdf" },
-      { title: "IBM Data Science (in progress)", org: "IBM", year: "2026", proof: "/pdf/mi-certificate.pdf" },
 
     ],
   },
@@ -122,7 +120,6 @@ export const SIDE_HUSTLES: { heading: string; entries: Achievement[] }[] = [
     entries: [
       { title: "AI/DS Internship", org: "YBI Foundation", year: "2026", proof: "/pdf/15 day internship.pdf" },
       { title: "Ethcial hacking internship", org: "Remarkskill education", year: "2025", proof: "/pdf/internship letter.jpg" },
-      
       { title: "Ethcial hacking internship", org: "Remarkskill education", year: "2025", proof: "/pdf/internship-letter.pdf" },
     ],
   },
@@ -131,12 +128,6 @@ export const SIDE_HUSTLES: { heading: string; entries: Achievement[] }[] = [
     entries: [
       { title: "Advanced React Patterns", org: "Online Platform", year: "2023", proof: "/pdf/course-react.pdf" },
       { title: "Embedded Systems Basics", org: "Online Platform", year: "2023", proof: "/pdf/course-embedded.pdf" },
-    ],
-  },
-  {
-    heading: "ACHIEVEMENTS",
-    entries: [
-      { title: "Deepfake Detection — Research Recognition", org: "Department Showcase", year: "2026", proof: "/pdf/achievement-deepfake.pdf" },
     ],
   },
 ];
