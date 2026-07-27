@@ -126,8 +126,10 @@ export const SIDE_HUSTLES: { heading: string; entries: Achievement[] }[] = [
   {
     heading: "COURSES",
     entries: [
-      { title: "Advanced React Patterns", org: "Online Platform", year: "2023", proof: "/pdf/course-react.pdf" },
-      { title: "Embedded Systems Basics", org: "Online Platform", year: "2023", proof: "/pdf/course-embedded.pdf" },
+      { title: "Generative AI for Data Scientists (Specialization) ", org: "IBM • Coursera", year: "2026", proof: "/pdf/ibm-generative-ai-for-data-scientists.pdf" },
+      { title: "Generative AI: Introduction and Applications", org: "IBM • Coursera", year: "2026", proof: "/pdf/ibm-genai-introduction.pdf" },
+      { title: "Generative AI: Prompt Engineering Basics", org: "IBM • Coursera", year: "2026", proof: "/pdf/ibm-prompt-engineering.pdf" },
+      { title: "Generative AI: Elevate Your Data Science Career", org: "IBM • Coursera", year: "2026", proof: "/pdf/ibm-data-science-career.pdf" },
     ],
   },
 ];
