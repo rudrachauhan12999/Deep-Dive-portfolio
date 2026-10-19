@@ -110,7 +110,9 @@ export const SIDE_HUSTLES: { heading: string; entries: Achievement[] }[] = [
   {
     heading: "HACKATHONS",
     entries: [
-       { title: "Technoism 2026 — 1st runner up ", org: "C K Pithawala College of Engineering & Technology", year: "2026", proof: "/pdf/TECHMANTHAN2026_Rudra_Chauhan.pdf" },
+       { title: "HACKTOBERFEST X MLH SURAT 2026 — Winner ", org: "HACTOBERFEST", year: "2026", proof: "/pdf/TECHMANTHAN2026_Rudra_Chauhan.pdf" },
+       { title: "HACTOBERFEST X MLH X VADODRA 2026 — Winner ", org: "HACTOBERFEST", year: "2026", proof: "/pdf/TECHMANTHAN2026_Rudra_Chauhan.pdf" },
+      { title: "Technoism 2026 — 1st runner up ", org: "C K Pithawala College of Engineering & Technology", year: "2026", proof: "/pdf/TECHMANTHAN2026_Rudra_Chauhan.pdf" },
       { title: "TechManthan 2026 — Winner ", org: "Techno NJP Institue", year: "2026", proof: "/pdf/TECHMANTHAN2026_Rudra_Chauhan.pdf" },
       { title: "Climate Data Hackathon — Finalist(Top 8)", org: "Delhi based Hackathon", year: "2026", proof: "/pdf/Climate data hackathon certificate.pdf" },
       { title: "Hack & Forge— Participant", org: "IITB/Unstop", year: "2026", proof: "/pdf/hack & forge certificate.pdf" },
